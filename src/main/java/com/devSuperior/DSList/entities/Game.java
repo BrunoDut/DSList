@@ -3,11 +3,7 @@ package com.devSuperior.DSList.entities;
 import java.util.Objects;
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
-import jakarta.persistence.Table;
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+
 
 //configurando a classe para o banco de dados
 @Entity
@@ -26,9 +22,9 @@ public class Game {
     private Double score;
     private String imgUrl;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT") ///converter para text no banco de dados
     private String shortDescription;
-    
+
     @Column(columnDefinition = "TEXT")
     private String longDescription;
 
