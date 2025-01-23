@@ -30,6 +30,8 @@ public class GameController { // controla a porta de entrada do backend;
         return result;
     }
 
+
+    
     
 
 }
