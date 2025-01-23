@@ -2,6 +2,7 @@ package com.devSuperior.DSList.entities;
 
 import java.util.Objects;
 import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
@@ -22,15 +23,19 @@ public class Game {
     private int year;
     private String genre;
     private String platforms;
-    private double score;
+    private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+    
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     public Game() {
     }
 
-    public Game(Long id, String title, int year, String genre, String platforms, double score, String imgUrl,
+    public Game(Long id, String title, int year, String genre, String platforms, Double score, String imgUrl,
             String shortDescription, String longDescription) {
         Id = id;
         this.title = title;
@@ -87,7 +92,7 @@ public class Game {
         return score;
     }
 
-    public void setScore(double score) {
+    public void setScore(Double score) {
         this.score = score;
     }
 
