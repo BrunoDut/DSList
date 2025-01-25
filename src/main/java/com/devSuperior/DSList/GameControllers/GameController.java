@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.devSuperior.DSList.dto.GameDTO;
 import com.devSuperior.DSList.dto.GameMinDTO;
 import com.devSuperior.DSList.service.GameService;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PostMapping;
+
+
 
 @RestController
 @RequestMapping(value = "/games") //configurando o caminho para minha api
@@ -30,7 +35,8 @@ public class GameController { // controla a porta de entrada do backend;
         return result;
     }
 
-
+   
+    
     
     
 
